@@ -60,6 +60,7 @@ var offsetSeries = 0 ;
             type:"get",
             url:comicLink+`?limit=5&offset=${offsetComic}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
             success: function(data){
+                console.log(data);
                 for(comic of data.data.results){
                    let addComic = comicDOM(comic);
                     $('#comic-lists').append(addComic);
@@ -88,7 +89,7 @@ var offsetSeries = 0 ;
             url:EventLink+`?limit=5&offset=${offsetEvent}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
             success: function(data){
 
-                
+                console.log(data);
                 for(ev of data.data.results){
                    let addEvent = EventDOM(ev);
                     $('#event-lists').append(addEvent);
@@ -116,7 +117,7 @@ var offsetSeries = 0 ;
             type:"get",
             url:seriesLink+`?limit=5&offset=${offsetSeries}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
             success: function(data){
-
+                console.log(data);
                 for(ev of data.data.results){
                    let addseries = seriesDOM(ev);
                     $('#series-lists').append(addseries);
