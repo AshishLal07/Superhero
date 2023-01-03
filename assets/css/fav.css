@@ -1,0 +1,72 @@
+body {
+    overscroll-behavior: none;  
+    height: 100vh;
+    background: linear-gradient(45deg,maroon,black); 
+ }
+ h1{
+     color: gray;
+ }
+ /* nav and most from bootstrap */
+ nav{
+     background-color: gray;
+ }
+ .nav-link{
+    font-size: 1.4rem;
+    
+ }
+ /* container design and content */
+
+ #fav-container{
+     background-color: black;
+     background-repeat: no-repeat;
+     margin-top: 45px;
+     height: 80vh; 
+     width: 70vw; 
+     margin-inline: auto;
+ }
+ /* table row and column style */
+ #table-container{
+    overflow: auto; 
+    height: 84%;
+ }
+ #table-container::-webkit-scrollbar{
+    width: 0.8em;
+    
+ }
+ #table-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#table-container::-webkit-scrollbar-thumb {
+  background-color: gray;
+  outline: 1px solid slategrey;
+  
+}
+
+ tr{
+     border-bottom: 10px solid black;
+ }
+ th{
+     box-sizing: border-box;
+     font-size: 1.8rem;
+     padding-left: 14px;
+     background-color: maroon;
+     color: white;
+     height: 60px;
+    
+ }
+ th > i{
+     cursor: pointer;
+ }
+ th > i:hover::before{
+     color: yellow;
+ }
+ th.trash{
+     text-align: center;
+ }
+ table{
+     margin-top: 20px;
+     margin-inline: auto;
+     border-collapse: collapse;
+     overflow-y: scroll;
+ }
