@@ -22,12 +22,13 @@ var offsetSeries = 0 ;
 
             $.ajax({
                 type:'get',
-                url:`https://gateway.marvel.com/v1/public/characters?limit=100&name=${value}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
+                url:`http://gateway.marvel.com/v1/public/characters?limit=100&name=${value}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
                 success: function(data){
-
+                    console.log(data);
                     $('#hero-name').text(value);
                     $('#hero-desc').text(data.data.results[0].description);
                     $('#hero-img').attr('src',`${data.data.results[0].thumbnail.path}/portrait_incredible.${data.data.results[0].thumbnail.extension}`);
+                    
                     comicList(data.data.results[0].comics.collectionURI);
                     eventList(data.data.results[0].events.collectionURI);
                     seriesList(data.data.results[0].series.collectionURI);
