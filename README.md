@@ -6,7 +6,7 @@
 
     Main page of website consist of Search bar where you can able find your heros, if don't remember you're hero full name it will give auto suggest.
 
-    ![Alt text](./assets/Images/Screen%20Shot%202023-01-03%20at%2011.03.06%20PM.png)
+    ![Alt text](assets/Images/Screen%20Shot%202023-01-03%20at%2011.03.06%20PM.png)
 
 ## Heros site
     
