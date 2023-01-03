@@ -165,6 +165,7 @@ var offsetSeries = 0 ;
                     type:'get',
                     url:`https://gateway.marvel.com:443/v1/public/characters?name=${value}&ts=1672118036&apikey=652daec402a35144b270c8c50e8398ca&hash=1439ea2f769fd2d1cc64b62ffb0f0511`,
                     success: function(data){
+                        let linkFormat = `https://gateway.marvel.com/v1/public/characters/${data.data.results[0].id}/`
                         if(e.target.parentElement.id =="comics"){
                             let comicData = data.data.results[0].comics
                             let comics = e.target.parentElement.querySelector('#comic-lists');
@@ -173,7 +174,7 @@ var offsetSeries = 0 ;
                                     comics.removeChild(comics.firstChild);
                                 }
                                 offsetComic += 5;
-                                comicList(comicData.collectionURI);
+                                comicList(linkFormat+'comics');
 
                             }else{
                                 offsetComic = 0;
@@ -188,7 +189,7 @@ var offsetSeries = 0 ;
                                     Events.removeChild(Events.firstChild);
                                 }
                                 offsetEvent += 5;
-                                eventList(EventData.collectionURI);
+                                eventList(linkFormat+'events');
 
                             }else{
                                 offsetEvent = 0;
@@ -203,7 +204,7 @@ var offsetSeries = 0 ;
                                     Series.removeChild(Series.firstChild);
                                 }
                                 offsetSeries += 5;
-                                seriesList(SeriesData.collectionURI);
+                                seriesList(linkFormat+'series');
 
                             }else{
                                 offsetSeries = 0;
@@ -229,7 +230,7 @@ var offsetSeries = 0 ;
                                     comics.removeChild(comics.firstChild);
                                 }
                                 offsetComic -= 5;
-                                comicList(comicData.collectionURI);
+                                comicList(linkFormat+'comics');
 
                             }else{
                                 offsetComic = 0;
@@ -244,7 +245,7 @@ var offsetSeries = 0 ;
                                     Events.removeChild(Events.firstChild);
                                 }
                                 offsetEvent -= 5;
-                                eventList(EventData.collectionURI);
+                                eventList(linkFormat+'events');
 
                             }else{
                                 offsetEvent = 0;
@@ -259,7 +260,7 @@ var offsetSeries = 0 ;
                                     Series.removeChild(Series.firstChild);
                                 }
                                 offsetSeries -= 5;
-                                seriesList(SeriesData.collectionURI);
+                                seriesList(linkFormat+'series');
 
                             }else{
                                 offsetSeries = 0;
